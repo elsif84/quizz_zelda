@@ -28,8 +28,8 @@ let heroes = [
         class: "heroName"
     },
     {
-        name: "Rhoam Bosphoramus<br/>Hyrule",
-        initials: "R---- B----------<br/>H-----",
+        name: "Rhoam Bosphoramus Hyrule",
+        initials: "R---- B---------- H-----",
         unrevealed: "img/Hero4u.png",
         revealed: "img/Hero4r.png",
         class: "hero4Name"

@@ -176,6 +176,7 @@ h3 br {
     width: 240px;
     height: 50px;
     border-radius: 30px;
+    white-space: pre;
 }
 
 .hero4Name {
@@ -187,9 +188,10 @@ h3 br {
     line-height: 24px;
     border: 5px solid #8B6C42;
     background-color: #E1CE9A;
-    width: 240px;
+    width: 176px;
     height: 50px;
     border-radius: 30px;
+    padding: 0 32px;
 }
 
 .initialsTxt {

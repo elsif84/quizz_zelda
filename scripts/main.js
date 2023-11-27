@@ -47,7 +47,7 @@ function revealName(hero) {
     const imgRevealedBtn = imgRevealedBtns[hero.name];
     const nameRevealedBtn = nameRevealedBtns[hero.name];
 
-    heroName.innerHTML = hero.name;
+    heroName.textContent = hero.name;
     heroName.style.border = "5px solid #318CE7";
     heroName.style.backgroundColor = "#73C2FB";
     heroImg.src = hero.revealed;
@@ -102,7 +102,7 @@ for (let hero of heroes) {
     heroCase.appendChild(initialsBtn);
     initialsBtns[hero.name] = initialsBtn;
     initialsBtn.addEventListener('click', () => {
-        heroName.innerHTML = hero.initials;
+        heroName.textContent = hero.initials;
         heroName.classList.add("initialsTxt");
         heroCases[hero.name].usedInitials = true;
         updateScore(hero.name, false);
