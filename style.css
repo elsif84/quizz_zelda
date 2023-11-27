@@ -1,0 +1,364 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+body {
+    background-color: #4E3D28;
+    background-image: url("img/Triforce_BG.jpg");
+    background-repeat: repeat;
+    margin: 0;
+    z-index: 2;
+}
+
+h1 {
+    line-height: 16px;
+}
+
+h1, h3 {
+    color: #E1CE9A;
+}
+
+h3 {
+    margin: 1em 20px;
+}
+
+h3 br {
+    display: none;
+}
+
+#welcome {
+    font-family: 'The Wild Breath of Zelda', sans-serif;
+    font-size: 76px;
+    line-height: normal;
+}
+
+.upperTable {
+    width: 1080px;
+    border: 2px solid #E1CE9A;
+    border-radius: 25px 25px 0 0;
+    background-color: #E1CE9A;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.guidelines {
+    margin-bottom: 20px;
+    height: 156px;
+}
+
+.instructions {
+    color: #4E3D28;
+    margin: 16px 0;
+}
+
+#input{
+    background-color: white;
+    color: black;
+    height: 24px;
+    border-radius: 16px;
+}
+
+.hintsText p{
+    text-align: left;
+    width: fit-content;
+    margin: 16px auto;
+}
+
+#finished {
+    font-family: 'The Wild Breath of Zelda', sans-serif;
+    color: #8B6C42;
+    font-size: 76px;
+}
+
+.infobar {
+    display: flex;
+    width: 100%;
+    height: 28px;
+}
+
+.infobar p {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.infobox {
+    width: 33%;
+    color: black;
+}
+
+#heroesLeft, #scoreText {
+    color: black;
+}
+
+.slideup {
+    font-weight: bold;
+    color: green;
+    animation-duration: 3s;
+    animation-name: slideup;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.slidedown {
+    font-weight: bold;
+    color: red;
+    animation-duration: 3s;
+    animation-name: slidedown;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideup {
+    0% {
+        translate: 0px 0px;
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        translate: 0px -10px;
+        opacity: 0%;
+    }
+}
+
+@keyframes slidedown {
+    0% {
+        translate: 0px 0px;
+        opacity: 100%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        translate: 0px 10px;
+        opacity: 0%;
+    }
+}
+
+.heroesTable {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1060px;
+    border: 2px solid #E1CE9A;
+    border-radius: 0 0 25px 25px;
+    background-color: white;
+    background-image: url("img/Zen_BG.jpg");
+    background-repeat: repeat;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 10px;
+}
+
+.heroCase {
+    display: flex;
+    margin: 10px;
+    position: relative;
+}
+
+.heroName {
+    align-self: end;
+    font-family: 'Medula One', sans-serif;
+    font-size: 36px;
+    color: #318CE7;
+    text-align: center;
+    line-height: 50px;
+    border: 5px solid #8B6C42;
+    background-color: #E1CE9A;
+    width: 240px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.hero4Name {
+    align-self: end;
+    font-family: 'Medula One', sans-serif;
+    font-size: 30px;
+    color: #318CE7;
+    text-align: center;
+    line-height: 24px;
+    border: 5px solid #8B6C42;
+    background-color: #E1CE9A;
+    width: 240px;
+    height: 50px;
+    border-radius: 30px;
+}
+
+.initialsTxt {
+    color: #8B6C42;
+}
+
+.heroImg {
+    margin-right: -36px;
+    height: 100px;
+    z-index: 1;
+}
+
+.initialsBtn, .imgRevealedBtn, .nameRevealedBtn {
+    color: black;
+    border: 2px solid #8B6C42;
+    height: 20px;
+    padding: 0 10px 0 10px;
+    border-radius: 15px;
+    align-self: end;
+    position: absolute;
+    bottom: -8px;
+}
+
+.initialsBtn {
+    left: 110px;
+    
+}
+
+.imgRevealedBtn {
+    left: 180px;
+}
+
+.nameRevealedBtn {
+    left: 242px;
+}
+
+.initialsBtn:hover, .imgRevealedBtn:hover, .nameRevealedBtn:hover {
+    cursor: pointer;
+    background-color: #E1CE9A;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    background-color: #E1CE9A;
+    margin-top: 20px;
+    line-height: 50px;
+    position: relative;
+}
+
+footer p{
+    width: 1080px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+#elsif {
+    width: 64px;
+    position: absolute;
+    top: 32%;
+    margin-left: 4px;
+}
+
+@media screen and (max-width: 1119px) {
+    .upperTable {
+        width: 740px;
+    }
+
+    .heroesTable {
+        width: 720px;
+    }
+
+    .guidelines {
+        height: 173px;
+    }
+
+    footer p {
+        width: 740px;
+    }
+}
+
+@media screen and (max-width: 779px) {
+
+    body {
+        display: inline-block;
+        justify-content: center;
+        width: 100%;
+    }
+
+    h3 {
+        margin: 1em 10%;
+    }
+
+    h3 br {
+        display: block;
+    }
+
+    .guidelines {
+        height: 229px;
+    }
+
+    .upperTable {
+        width: 480px;
+    }
+
+    .instructions {
+        margin: 16px 6%;
+    }
+
+    .hintsText {
+        margin: 0 5%;
+    }
+
+    .heroesTable {
+        width: 460px;
+        justify-content: center;
+    }
+
+    footer {
+        height: auto;
+        padding: 12px 0;
+    }
+
+    footer p {
+        width: 480px;
+        line-height: normal;
+    }
+
+    #elsif {
+        top: 52%;
+    }
+}
+
+@media screen and (max-width: 519px) {
+    h3 br {
+        display: none;
+    }
+
+    .guidelines {
+        height: 303px;
+    }
+
+    .upperTable {
+        width: 360px;
+    }
+
+    .infobar {
+        display: block;
+        justify-content: center;
+        height: 56px;
+    }
+
+    .infobox {
+        width: 100%;
+    }
+
+    .score {
+        padding-top: 8px;
+    }
+
+    .badOrGood {
+        display: none;
+    }
+
+    .heroesTable {
+        width: 340px;
+    }
+
+    footer p {
+        width: 360px;
+    }
+}
