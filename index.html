@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test Zelda</title>
+    <meta name="description" content="Testez vos connaissances sur les personnages de Breath of the Wild !" />
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.cdnfonts.com/css/the-wild-breath-of-zelda" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bf631194c6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Medula+One&display=swap" rel="stylesheet">
-    <script src="scripts/array.js"></script>
+    <script src="scripts/array.js" defer></script>
     <script src="scripts/main.js" defer></script>
 </head>
 <body>
@@ -20,7 +22,7 @@
     <div class="upperTable">
         <div class="guidelines">
             <p class="instructions">Tapez le nom d'un des personnages de l'univers des 3 jeux cités ci-dessus et appuyez sur Entrée pour tester vos connaissances !</p>
-            <input type="text" id="input">
+            <input type="text" id="input"><i class="fa-regular fa-circle-check fa-xl" id="check"></i><i class="fa-regular fa-circle-xmark fa-xl" id="xmark"></i>
             <div class="hintsText">
                 <p>
                     Pour vous aider, vous avez droit à 2 indices :<br/>

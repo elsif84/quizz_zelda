@@ -1,5 +1,7 @@
 const input = document.getElementById("input");
 const badOrGood = document.querySelector(".badOrGood");
+const check = document.getElementById("check");
+const xmark = document.getElementById("xmark");
 
 
 const heroesTable = document.querySelector(".heroesTable");
@@ -151,9 +153,12 @@ input.addEventListener("keyup", (e) => {
                     badOrGood.classList.remove("slideup");
                     badOrGood.classList.remove("slidedown");
                     heroName.classList.remove("initialsTxt");
+                    check.classList.remove("slideup");
                     setTimeout(() => {
                         badOrGood.textContent = "Bien joué !";
                         badOrGood.classList.add("slideup");
+                        check.style.visibility = "visible";
+                        check.classList.add("slideup");
                     }, 10);
                     revealName(hero);
                     updateScore(hero.name, true);
@@ -176,9 +181,12 @@ input.addEventListener("keyup", (e) => {
         if (!heroFound) {
             badOrGood.classList.remove("slideup");
             badOrGood.classList.remove("slidedown");
+            xmark.classList.remove("slidedown");
             setTimeout(() => {
                 badOrGood.textContent = "Ce nom n'est pas connu en Hyrule...";
                 badOrGood.classList.add("slidedown");
+                xmark.style.visibility = "visible";
+                xmark.classList.add("slidedown");
             }, 10);
             input.value = "";
         }

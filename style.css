@@ -64,6 +64,10 @@ h3 br {
     border-radius: 16px;
 }
 
+#check, #xmark {
+    display: none;
+}
+
 .hintsText p{
     text-align: left;
     width: fit-content;
@@ -98,6 +102,7 @@ h3 br {
 }
 
 .slideup {
+    visibility: visible;
     font-weight: bold;
     color: green;
     animation-duration: 3s;
@@ -332,10 +337,19 @@ footer p{
 
     .guidelines {
         height: 303px;
+        position: relative;
     }
 
     .upperTable {
         width: 360px;
+    }
+
+    #check, #xmark {
+        display: inline-block;
+        position: absolute;
+        top: 104px;
+        right: 44px;
+        visibility: hidden;
     }
 
     .infobar {
