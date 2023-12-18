@@ -27,6 +27,7 @@ const revealedImg= {};
 const nameRevealedBtns = {};
 let scores = {};
 
+// Mise à jour du score
 function updateScore(heroName, isCorrect) {
     heroCases[heroName].score = 0;
     if (isCorrect) {
@@ -42,6 +43,7 @@ function updateScore(heroName, isCorrect) {
     scoreText.textContent = totalScore;
 };
 
+// Nom tapé correctement
 function revealName(hero) {
     const heroName = heroNames[hero.name];
     const heroImg = heroImages[hero.unrevealed];
@@ -61,6 +63,8 @@ function revealName(hero) {
     input.value = "";
 }
 
+
+// Dernier nom révélé -> fin du jeu
 function finishGame() {
     if (heroesLeft.textContent == "0") {
         const maxScore = totalScore / (heroes.length * 3) * 100;
@@ -97,6 +101,8 @@ for (let hero of heroes) {
     heroName.classList.add(hero.class);
     heroCase.appendChild(heroName);
     heroNames[hero.name] = heroName;
+
+    // Bouton indice révélant les initiales
     const initialsBtn = document.createElement("button");
     initialsBtn.classList.add("initialsBtn");
     initialsBtn.textContent = "Initiales";
@@ -109,6 +115,8 @@ for (let hero of heroes) {
         heroCases[hero.name].usedInitials = true;
         updateScore(hero.name, false);
     })
+
+    // Bouton indice révélant l'image
     const imgRevealedBtn = document.createElement("button");
     imgRevealedBtn.classList.add("imgRevealedBtn");
     imgRevealedBtn.textContent = "Image";
@@ -120,6 +128,8 @@ for (let hero of heroes) {
         heroCases[hero.name].revealedImg = true;
         updateScore(hero.name, false);
     })
+
+    // Bouton révélant le nom entier
     const nameRevealedBtn = document.createElement("button");
     nameRevealedBtn.classList.add("nameRevealedBtn");
     nameRevealedBtn.textContent = "Passer";
@@ -144,6 +154,23 @@ input.addEventListener("keyup", (e) => {
 
         let heroFound = false;
 
+        let capitalInput = userInput.split(' ');
+        for (let i = 0; i < capitalInput.length; i++) {
+           capitalInput[i] = capitalInput[i].charAt(0).toUpperCase() + capitalInput[i].slice(1);
+        }
+        const inputOK = capitalInput.join(' ');
+
+       // Message pour un nom coorect, mais déjà trouvé
+       if(foundHeroes.includes(inputOK)) {
+           badOrGood.classList.remove("slideup");
+           badOrGood.classList.remove("slidedown");
+           setTimeout(() => {
+               badOrGood.textContent = "Ce nom a déjà été révélé !";
+               badOrGood.classList.add("slideup");
+           }, 10);
+           input.value = "";
+       }
+
         // Chercher un héros correspondant
         for (let hero of heroes) {
             const heroName = heroNames[hero.name];
@@ -164,20 +191,11 @@ input.addEventListener("keyup", (e) => {
                     updateScore(hero.name, true);
                 }
                 heroFound = true;
-                break; // Sortez de la boucle puisqu'une correspondance a été trouvée
+                break;
             }
         }
 
-        if(foundHeroes.includes(userInput)) {
-            badOrGood.classList.remove("slideup");
-            badOrGood.classList.remove("slidedown");
-            setTimeout(() => {
-                badOrGood.textContent = "Ce nom a déjà été révélé !";
-                badOrGood.classList.add("slideup");
-            }, 10);
-            input.value = "";
-        }
-
+        // Message pour un mot qui ne correspond pas
         if (!heroFound) {
             badOrGood.classList.remove("slideup");
             badOrGood.classList.remove("slidedown");
