@@ -94,6 +94,7 @@ for (let hero of heroes) {
     heroesTable.appendChild(heroCase);
     const heroImg = document.createElement("img");
     heroImg.classList.add("heroImg");
+    heroImg.alt = hero.alt;
     heroCase.appendChild(heroImg);
     heroImages[hero.unrevealed] = heroImg;
     heroImg.src = hero.unrevealed;
