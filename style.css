@@ -206,6 +206,7 @@ h3 br {
 .heroImg {
     margin-right: -36px;
     height: 100px;
+    width: 100px;
     z-index: 1;
 }
 
