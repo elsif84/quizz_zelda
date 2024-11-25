@@ -3,10 +3,6 @@
     text-align: center;
 }
 
-h2 {
-    font-size: 1.25em;
-}
-
 p {
     margin-block-end: 0;
     margin-block-start: 0;
@@ -24,15 +20,16 @@ h1 {
     line-height: 16px;
 }
 
-h1, h3 {
+h1, h2 {
     color: #E1CE9A;
 }
 
-h3 {
+h2 {
+    font-size: 1.25em;
     margin: 1em 20px;
 }
 
-h3 br {
+h2 br {
     display: none;
 }
 
@@ -292,11 +289,11 @@ footer p{
         width: 100%;
     }
 
-    h3 {
+    h2 {
         margin: 1em 10%;
     }
 
-    h3 br {
+    h2 br {
         display: block;
     }
 
