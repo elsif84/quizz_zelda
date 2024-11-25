@@ -53,6 +53,7 @@ h3 br {
 }
 
 .instructions {
+    display: block;
     color: #4E3D28;
     margin: 16px 0;
 }
